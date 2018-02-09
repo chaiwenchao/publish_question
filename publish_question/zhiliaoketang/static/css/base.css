@@ -1,0 +1,13 @@
+.logo{
+    width: 100px;
+    height: 40px;
+
+}
+
+.main{
+    backgroud: #f3f3;
+    width: 750px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px;
+    }

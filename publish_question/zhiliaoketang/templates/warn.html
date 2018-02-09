@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}提示{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/warn.css') }}">
+    <script src="{{ url_for('static',filename='js/warn.js') }}"></script>
+{% endblock %}
+
+{% block main %}
+   <div class="informs">
+    <h4>提示信息</h4>
+    <p>
+        <span class="key-message">未找到相关结果</span>，
+        <span id="timer">5</span>秒后将自动跳转回首页。
+    </p>
+    <div class="jump-button">
+        <button type="submit" class="btn btn-default pull-right" onclick="location='{{ url_for('index') }}'">立即跳转</button>
+    </div>
+</div>
+<script type="text/javascript">timetojump(5,"{{ url_for('index') }}");</script>
+{% endblock %}
